@@ -24,6 +24,8 @@ for folder in $GENOMES/*; do
 
     prokka --outdir $OUTPUT_FOLDER/$genome/ --prefix $genome --kingdom Bacteria --evalue 1e-9 --coverage 80 --quiet $folder/*.fna
 
+    echo $genome.gff >> $OUTPUT_FOLDER/gff_files_list.txt
+
 done
 
-echo "All gennomes were annotated succesfully successfully in "$OUTPUT_FOLDER"."
+echo "All genomes were annotated succesfully successfully in "$OUTPUT_FOLDER"."
