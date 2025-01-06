@@ -14,7 +14,7 @@ if [ ! -d "$DATA_FOLDER" ]; then
     exit 1
 fi
 
-# for each accession ID
+# for each data folder
 for folder in $DATA_FOLDER/unzipped/*; do
 
     accession_id=$(basename "$folder")
@@ -26,4 +26,4 @@ for folder in $DATA_FOLDER/unzipped/*; do
     rm $folder/*.md $folder/*.txt
 done 
 
-echo "All genomes directories are restructured successfully in "$DATA_FOLDER/unzipped"."
+echo "All genomes directories are restructured successfully in "$DATA_FOLDER"unzipped."
